@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:investinymobile/mydrawer.dart';
-import 'projectsPage.dart';
+import 'feed.dart';
 
 import 'footer.dart';
 
@@ -14,19 +14,22 @@ class _AccueilInvestinyState extends State<AccueilInvestiny> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white, 
+        backgroundColor: Colors.black,
         title: Image.asset(
-          './logo-removebg-preview.png', 
+          './logonoir-removebg-preview.png',
           height: 60,
         ),
-        
       ),
-        body:Center(
-          child: ProjectsPage(),
+      body: Center(
+        child: Feed(),
+      ),
+      drawer: Drawer(
+        child: Container(
+          color: Colors.black,
+          child: MyDrawer(),
         ),
-      drawer: MyDrawer(),
+      ),
       bottomNavigationBar: FooterPage(),
     );
-       
   }
 }

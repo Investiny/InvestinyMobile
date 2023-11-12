@@ -5,7 +5,9 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        
         backgroundColor: Color(0xFFdddd), // Couleur d'arrière-plan
         body: Center(
           child: Container(

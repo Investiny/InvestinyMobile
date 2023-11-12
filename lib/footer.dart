@@ -1,39 +1,68 @@
 import 'package:flutter/material.dart';
+import 'package:investinymobile/accueil.dart';
+
+import 'ajoutpost.dart';
+import 'notificatin.dart';
+import 'profile.dart';
+
 class FooterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-return BottomAppBar(
-        color: Colors.white, // Couleur de la barre inférieure
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              icon: Icon(Icons.home), // Icône d'accueil
-              onPressed: () {
-                // Action lors de l'appui sur l'icône d'accueil
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.notifications), // Icône de notification
-              onPressed: () {
-                // Action lors de l'appui sur l'icône de notification
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.add), // Icône d'ajout d'article
-              onPressed: () {
-                // Action lors de l'appui sur l'icône d'ajout d'article
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.person), // Icône de profil
-              onPressed: () {
-                // Action lors de l'appui sur l'icône de profil
-              },
-            ),
-          ],
-        ),
-      );
+    return BottomAppBar(
+      color: Colors.black, // Couleur de la barre inférieure
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          IconButton(
+            icon: Icon(
+              Icons.home,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ), // Icône d'accueil
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AccueilInvestiny()),
+              );
+            },
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.notifications,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ), // Icône de notification
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => NotificationPage()),
+              );
+            },
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.add,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ), // Icône d'ajout d'article
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AjoutArticle()),
+              );
+            },
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.person,
+              color: Color.fromARGB(255, 255, 255, 255),
+            ), // Icône de profil
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfilePage()),
+              );
+            },
+          ),
+        ],
+      ),
+    );
   }
-
 }
