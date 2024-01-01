@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:investinymobile/accueil.dart';
 
-import 'ajoutpost.dart';
+import 'screens/ajout_projet.dart';
 import 'notificatin.dart';
 import 'profile.dart';
 
@@ -45,7 +45,7 @@ class FooterPage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => AjoutArticle()),
+                MaterialPageRoute(builder: (context) => AjoutProjet()),
               );
             },
           ),
